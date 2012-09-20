@@ -67,6 +67,21 @@
     return [self performRequest:[self requestForURL:url method:@"DELETE" payload:nil headers:headers requestDelegate:requestDelegate]];
 }
 
+- (LRRestyRequest *)OPTIONS:(NSURL *)url headers:(NSDictionary *)headers delegate:(id<LRRestyRequestDelegate>)requestDelegate;
+{
+    return [self performRequest:[self requestForURL:url method:@"OPTIONS" payload:nil headers:headers requestDelegate:requestDelegate]];
+}
+
+- (LRRestyRequest *)REPORT:(NSURL *)url payload:(id)payload headers:(NSDictionary *)headers delegate:(id<LRRestyRequestDelegate>)requestDelegate;
+{
+    return [self performRequest:[self requestForURL:url method:@"REPORT" payload:payload headers:headers requestDelegate:requestDelegate]];
+}
+
+- (LRRestyRequest *)PROPFIND:(NSURL *)url payload:(id)payload headers:(NSDictionary *)headers delegate:(id<LRRestyRequestDelegate>)requestDelegate;
+{
+    return [self performRequest:[self requestForURL:url method:@"PROPFIND" payload:payload headers:headers requestDelegate:requestDelegate]];
+}
+
 - (LRRestyRequest *)performRequest:(LRRestyRequest *)request;
 {
   [request setHTTPClient:self];

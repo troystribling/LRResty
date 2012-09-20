@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05F04DD7160BA83A00C850A6 /* LRRestyClient+PROPFIND.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F04DD5160BA83A00C850A6 /* LRRestyClient+PROPFIND.h */; };
+		05F04DD8160BA83A00C850A6 /* LRRestyClient+PROPFIND.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F04DD6160BA83A00C850A6 /* LRRestyClient+PROPFIND.m */; };
+		05F04DDC160BA86900C850A6 /* LRRestyClient+REPORT.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F04DDA160BA86900C850A6 /* LRRestyClient+REPORT.h */; };
+		05F04DDD160BA86900C850A6 /* LRRestyClient+REPORT.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F04DDB160BA86900C850A6 /* LRRestyClient+REPORT.m */; };
+		05F148BB160B90E70044893F /* LRRestyClient+OPTIONS.h in Headers */ = {isa = PBXBuildFile; fileRef = 05F148B9160B90E70044893F /* LRRestyClient+OPTIONS.h */; };
+		05F148BC160B90E70044893F /* LRRestyClient+OPTIONS.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F148BA160B90E70044893F /* LRRestyClient+OPTIONS.m */; };
 		0FB9786D13A20F050010A37C /* LRRestyClient+DELETE.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FB9786B13A20F050010A37C /* LRRestyClient+DELETE.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0FB9786E13A20F050010A37C /* LRRestyClient+DELETE.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FB9786C13A20F050010A37C /* LRRestyClient+DELETE.m */; };
 		0FB9787013A20F190010A37C /* LRRestyClient+DELETE.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FB9786B13A20F050010A37C /* LRRestyClient+DELETE.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -234,6 +240,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05F04DD5160BA83A00C850A6 /* LRRestyClient+PROPFIND.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+PROPFIND.h"; sourceTree = "<group>"; };
+		05F04DD6160BA83A00C850A6 /* LRRestyClient+PROPFIND.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRRestyClient+PROPFIND.m"; sourceTree = "<group>"; };
+		05F04DDA160BA86900C850A6 /* LRRestyClient+REPORT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+REPORT.h"; sourceTree = "<group>"; };
+		05F04DDB160BA86900C850A6 /* LRRestyClient+REPORT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRRestyClient+REPORT.m"; sourceTree = "<group>"; };
+		05F148B9160B90E70044893F /* LRRestyClient+OPTIONS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+OPTIONS.h"; sourceTree = "<group>"; };
+		05F148BA160B90E70044893F /* LRRestyClient+OPTIONS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LRRestyClient+OPTIONS.m"; sourceTree = "<group>"; };
 		0FB9786A13A20E0D0010A37C /* LRResty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LRResty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB9786B13A20F050010A37C /* LRRestyClient+DELETE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LRRestyClient+DELETE.h"; sourceTree = "<group>"; };
 		0FB9786C13A20F050010A37C /* LRRestyClient+DELETE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "LRRestyClient+DELETE.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -559,14 +571,20 @@
 		A3087646120A31BD003859AC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A389E001125381700006572D /* LRRestyClient+GET.h */,
-				A389E002125381700006572D /* LRRestyClient+GET.m */,
-				A389E003125381700006572D /* LRRestyClient+POST.h */,
-				A389E004125381700006572D /* LRRestyClient+POST.m */,
-				A389E005125381700006572D /* LRRestyClient+PUT.h */,
-				A389E006125381700006572D /* LRRestyClient+PUT.m */,
 				0FB9786B13A20F050010A37C /* LRRestyClient+DELETE.h */,
 				0FB9786C13A20F050010A37C /* LRRestyClient+DELETE.m */,
+				A389E001125381700006572D /* LRRestyClient+GET.h */,
+				A389E002125381700006572D /* LRRestyClient+GET.m */,
+				05F148B9160B90E70044893F /* LRRestyClient+OPTIONS.h */,
+				05F148BA160B90E70044893F /* LRRestyClient+OPTIONS.m */,
+				A389E003125381700006572D /* LRRestyClient+POST.h */,
+				A389E004125381700006572D /* LRRestyClient+POST.m */,
+				05F04DD5160BA83A00C850A6 /* LRRestyClient+PROPFIND.h */,
+				05F04DD6160BA83A00C850A6 /* LRRestyClient+PROPFIND.m */,
+				A389E005125381700006572D /* LRRestyClient+PUT.h */,
+				A389E006125381700006572D /* LRRestyClient+PUT.m */,
+				05F04DDA160BA86900C850A6 /* LRRestyClient+REPORT.h */,
+				05F04DDB160BA86900C850A6 /* LRRestyClient+REPORT.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -1059,6 +1077,9 @@
 				0FB9786D13A20F050010A37C /* LRRestyClient+DELETE.h in Headers */,
 				A322549F13B6C93900F16A97 /* LRRestyResponse+Internal.h in Headers */,
 				A34E8A7313C5E58B006D5B76 /* LRRestyRequest+Internal.h in Headers */,
+				05F148BB160B90E70044893F /* LRRestyClient+OPTIONS.h in Headers */,
+				05F04DD7160BA83A00C850A6 /* LRRestyClient+PROPFIND.h in Headers */,
+				05F04DDC160BA86900C850A6 /* LRRestyClient+REPORT.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1158,7 +1179,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "LRResty" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1423,6 +1444,9 @@
 				A33E505012E89EB900746A2C /* NSRunLoop+Additions.m in Sources */,
 				A33E50C612E8AC6F00746A2C /* LRSynchronousProxy.m in Sources */,
 				0FB9786E13A20F050010A37C /* LRRestyClient+DELETE.m in Sources */,
+				05F148BC160B90E70044893F /* LRRestyClient+OPTIONS.m in Sources */,
+				05F04DD8160BA83A00C850A6 /* LRRestyClient+PROPFIND.m in Sources */,
+				05F04DDD160BA86900C850A6 /* LRRestyClient+REPORT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1631,6 +1655,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1657,6 +1682,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
