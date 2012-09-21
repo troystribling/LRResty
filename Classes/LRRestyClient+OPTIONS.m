@@ -19,7 +19,7 @@
 
 - (LRRestyRequest *)options:(NSString *)urlString withBlock:(LRRestyResponseBlock)block;
 {
-    return [self options:urlString withBlock:block];
+    return [HTTPClient OPTIONS:[NSURL URLWithString:urlString] delegate:[LRRestyClientBlockDelegate delegateWithBlock:block]];
 }
 
 #pragma mark -
