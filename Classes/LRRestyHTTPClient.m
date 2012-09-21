@@ -67,9 +67,9 @@
     return [self performRequest:[self requestForURL:url method:@"DELETE" payload:nil headers:headers requestDelegate:requestDelegate]];
 }
 
-- (LRRestyRequest *)OPTIONS:(NSURL *)url headers:(NSDictionary *)headers delegate:(id<LRRestyRequestDelegate>)requestDelegate;
+- (LRRestyRequest *)OPTIONS:(NSURL *)url delegate:(id<LRRestyRequestDelegate>)requestDelegate;
 {
-    return [self performRequest:[self requestForURL:url method:@"OPTIONS" payload:nil headers:headers requestDelegate:requestDelegate]];
+    return [self performRequest:[self requestForURL:url method:@"OPTIONS" payload:nil headers:nil requestDelegate:requestDelegate]];
 }
 
 - (LRRestyRequest *)REPORT:(NSURL *)url payload:(id)payload headers:(NSDictionary *)headers delegate:(id<LRRestyRequestDelegate>)requestDelegate;

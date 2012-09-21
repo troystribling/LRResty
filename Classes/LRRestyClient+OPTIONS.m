@@ -19,12 +19,7 @@
 
 - (LRRestyRequest *)options:(NSString *)urlString withBlock:(LRRestyResponseBlock)block;
 {
-    return [self options:urlString headers:nil withBlock:block];
-}
-
-- (LRRestyRequest *)options:(NSString *)urlString headers:(NSDictionary *)headers withBlock:(LRRestyResponseBlock)block;
-{
-    return [HTTPClient OPTIONS:[NSURL URLWithString:urlString] headers:headers delegate:[LRRestyClientBlockDelegate delegateWithBlock:block]];
+    return [self options:urlString withBlock:block];
 }
 
 #pragma mark -
@@ -35,16 +30,6 @@
     return [self performAsynchronousBlockWithTimeout:globalTimeoutInterval andReturnResultWhenReady:^(id *result, dispatch_semaphore_t semaphore)
             {
                 [self options:urlString withBlock:^(LRRestyResponse *response) {
-                    LRSYNCHRONOUS_PROXY_NOTIFY_CONDITION(result, [response retain], semaphore);
-                }];
-            }];
-}
-
-- (LRRestyResponse *)options:(NSString *)urlString headers:(NSDictionary *)headers;
-{
-    return [self performAsynchronousBlockAndReturnResultWhenReady:^(id *result, dispatch_semaphore_t semaphore)
-            {
-                [self options:urlString headers:headers withBlock:^(LRRestyResponse *response) {
                     LRSYNCHRONOUS_PROXY_NOTIFY_CONDITION(result, [response retain], semaphore);
                 }];
             }];
