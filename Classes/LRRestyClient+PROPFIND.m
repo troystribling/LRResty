@@ -15,19 +15,19 @@
 
 #pragma mark -
 #pragma mark Blocks API
-- (LRRestyRequest *)propfind:(NSString *)urlString payload:(NSDictionary *)payload withBlock:(LRRestyResponseBlock)block;
+- (LRRestyRequest *)propfind:(NSString *)urlString payload:(id)payload withBlock:(LRRestyResponseBlock)block;
 {
     return [self propfind:urlString payload:payload headers:nil withBlock:block];
 }
 
-- (LRRestyRequest *)propfind:(NSString *)urlString payload:(NSDictionary *)payload headers:(NSDictionary *)headers withBlock:(LRRestyResponseBlock)block;
+- (LRRestyRequest *)propfind:(NSString *)urlString payload:(id)payload headers:(NSDictionary *)headers withBlock:(LRRestyResponseBlock)block;
 {
     return [HTTPClient PROPFIND:[NSURL URLWithString:urlString] payload:payload headers:headers delegate:[LRRestyClientBlockDelegate delegateWithBlock:block]];
 }
 
 #pragma mark -
 #pragma mark Synchronous API
-- (LRRestyRequest *)propfind:(NSString *)urlString payload:(NSDictionary *)payload;
+- (LRRestyRequest *)propfind:(NSString *)urlString payload:(id)payload;
 {
     return [self performAsynchronousBlockWithTimeout:globalTimeoutInterval + 1 andReturnResultWhenReady:^(id *result, dispatch_semaphore_t semaphore)
             {
@@ -37,7 +37,7 @@
             }];
 }
 
-- (LRRestyRequest *)propfind:(NSString *)urlString payload:(NSDictionary *)payload headers:(NSDictionary *)headers;
+- (LRRestyRequest *)propfind:(NSString *)urlString payload:(id)payload headers:(NSDictionary *)headers;
 {
     return [self performAsynchronousBlockAndReturnResultWhenReady:^(id *result, dispatch_semaphore_t semaphore)
             {

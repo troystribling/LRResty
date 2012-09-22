@@ -15,12 +15,12 @@
 
 #pragma mark -
 #pragma mark Blocks API
-- (LRRestyRequest *)report:(NSString *)urlString payload:(NSDictionary *)payload withBlock:(LRRestyResponseBlock)block;
+- (LRRestyRequest *)report:(NSString *)urlString payload:(id)payload withBlock:(LRRestyResponseBlock)block;
 {
     return [self report:urlString payload:payload headers:nil withBlock:block];
 }
 
-- (LRRestyRequest *)report:(NSString *)urlString payload:(NSDictionary *)payload headers:(NSDictionary *)headers withBlock:(LRRestyResponseBlock)block;
+- (LRRestyRequest *)report:(NSString *)urlString payload:(id)payload headers:(NSDictionary *)headers withBlock:(LRRestyResponseBlock)block;
 {
     return [HTTPClient REPORT:[NSURL URLWithString:urlString] payload:payload headers:headers delegate:[LRRestyClientBlockDelegate delegateWithBlock:block]];
 }

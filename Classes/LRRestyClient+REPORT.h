@@ -23,7 +23,7 @@
  @param block       The response handler.
  @returns The request object.
  */
-- (LRRestyRequest *)report:(NSString *)urlString payload:(NSDictionary *)payload withBlock:(LRRestyResponseBlock)block;
+- (LRRestyRequest *)report:(NSString *)urlString payload:(id)payload withBlock:(LRRestyResponseBlock)block;
 
 /**
  Performs a REPORT request on URL resource with block response handling.
@@ -33,7 +33,7 @@
  @param block       The response handler.
  @returns The request object.
  */
-- (LRRestyRequest *)report:(NSString *)urlString payload:(NSDictionary *)payload headers:(NSDictionary *)headers withBlock:(LRRestyResponseBlock)block;
+- (LRRestyRequest *)report:(NSString *)urlString payload:(id)payload headers:(NSDictionary *)headers withBlock:(LRRestyResponseBlock)block;
 
 #pragma mark -
 #pragma mark Synchronous API
@@ -53,6 +53,6 @@
  @param headers     A dictionary of HTTP request headers.
  @returns The response to the request.
  */
-- (LRRestyResponse *)report:(NSString *)urlString payload:(NSDictionary *)payload headers:(NSDictionary *)headers;
+- (LRRestyResponse *)report:(NSString *)urlString payload:(id)payload headers:(NSDictionary *)headers;
 
 @end

@@ -23,7 +23,7 @@
  @param block       The response handler.
  @returns The request object.
  */
-- (LRRestyRequest *)propfind:(NSString *)urlString payload:(NSDictionary *)payload withBlock:(LRRestyResponseBlock)block;
+- (LRRestyRequest *)propfind:(NSString *)urlString payload:(id)payload withBlock:(LRRestyResponseBlock)block;
 
 /**
  Performs a PROPFIND request on URL resource with block response handling.
@@ -33,7 +33,7 @@
  @param block       The response handler.
  @returns The request object.
  */
-- (LRRestyRequest *)propfind:(NSString *)urlString payload:(NSDictionary *)payload headers:(NSDictionary *)headers withBlock:(LRRestyResponseBlock)block;
+- (LRRestyRequest *)propfind:(NSString *)urlString payload:(id)payload headers:(NSDictionary *)headers withBlock:(LRRestyResponseBlock)block;
 
 #pragma mark -
 #pragma mark Synchronous API
@@ -44,7 +44,7 @@
  @param payload     object containing request payload.
  @returns The response to the request.
  */
-- (LRRestyResponse *)propfind:(NSString *)urlString payload:(NSDictionary *)payload;
+- (LRRestyResponse *)propfind:(NSString *)urlString payload:(id)payload;
 
 /**
  Performs a *synchronous* PROPFIND request on URL, blocking the calling thread.
@@ -53,6 +53,6 @@
  @param headers     A dictionary of HTTP request headers.
  @returns The response to the request.
  */
-- (LRRestyResponse *)propfind:(NSString *)urlString payload:(NSDictionary *)payload headers:(NSDictionary *)headers;
+- (LRRestyResponse *)propfind:(NSString *)urlString payload:(id)payload headers:(NSDictionary *)headers;
 
 @end
