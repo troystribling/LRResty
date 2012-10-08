@@ -151,6 +151,8 @@
               headers:[(NSHTTPURLResponse *)self.URLResponse allHeaderFields]
        originalRequest:self];
   
+  [LRResty log:[NSString stringWithFormat:@"Response Headers: %@", restResponse.headers]];
+  [LRResty log:[NSString stringWithFormat:@"Responsde Data: %@", [[[NSString alloc] initWithData:restResponse.responseData encoding:NSUTF8StringEncoding] autorelease]]];
   [delegate restyRequest:self didFinishWithResponse:restResponse];
   
   [restResponse release];
